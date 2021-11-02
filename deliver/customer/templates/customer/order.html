@@ -29,14 +29,14 @@
 
                 <div class="pt-5">
                     {% for entre in entres %}
-                    <div class="row mt-4">
+                    <div class="row">
                         <div class="col-md-2 col-sm-12">
                             <img class="rounded" src="{{ entre.image.url }}" width="150" height="100"/>
                         </div>
                         <div class="col-md-8 col-sm-12">
                             <div class="d-flex flex-row">
                                 <div class="form-group form-check">
-                                    <input type="checkbox" name="items[]" class="form-check-input" value="{{ entre.pk }}">
+                                    <input type="checkbox" name="items[]" class="form-check-input" value="{{ app.pk }}">
                                     <label class="form-check-label">{{ entre.name }}</label>
                                 </div>
                                 <p class="font-weight-bold pl-5">{{ entre.price }}</p>
@@ -45,7 +45,7 @@
                         </div>
                     </div>
                     <hr />
-                    {% endfor %}
+                {% endfor %}
                 </div>
 
                 <div class="pt-5">
@@ -123,14 +123,14 @@
                     <div class="col-md-4 col-sm-12">
                         <div class="form-group pt-3">
                             <label for="name">Zip Code</label>
-                            <input required class="form-control" type="text" placeholder="94117" name="zip" />
+                            <input required class="form-control" type="text" placeholder="123456" name="zip" />
                         </div>
                     </div>
                 </div>
 
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#submitModal">
-                  Submit Order!
+                  Place Order
                 </button>
                 <!-- <button class="btn btn-dark mt-5">Place Order!</button> -->
 
@@ -139,7 +139,7 @@
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="submitModalLabel">Submit Your Order!</h5>
+                        <h5 class="modal-title" id="submitModalLabel">Submit Order</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
